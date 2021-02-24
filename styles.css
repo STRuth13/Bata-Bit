@@ -1,0 +1,267 @@
+:root {
+  --linear-br: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #201e1c;
+  --warm-black1: #282623;
+  --gray: #bababa;
+  --off-white: #faf8f7;
+  --just-white: white;
+  --gray: #757575;
+  --orange: #ff9536;
+  --text-gray: #808080;
+  --font: "Inter", sans-serif;
+}
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+.header {
+  background: var(--linear-br);
+}
+.marca {
+  display: flex;
+  /*border: 1px solid red;*/
+  justify-content: center;
+  padding-block-start: 39px;
+}
+.marca p {
+  color: var(--bitcoin-orange);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+}
+.header__titulo {
+  /*border: 1px solid red;*/
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 26px;
+  color: var(--just-white);
+  text-align: center;
+  margin-block-start: 26px;
+  margin-block-end: 24px;
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+}
+.header__descripcion {
+  color: var(--soft-orange);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  /*border: 1px solid green;*/
+  margin-block-start: 24px;
+  margin-block-end: 37px;
+}
+.header__btn {
+  background: var(--off-white);
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 4px;
+  padding: 12px 16px;
+  border: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  top: 24px;
+  position: relative;
+}
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url(./img/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 8px;
+}
+.tasa-cambio__bitcoin-img {
+  width: 195px;
+  height: 195px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 59px;
+  margin-block-end: 40px;
+}
+.tasa-cambio__titulo {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  color: var(--warm-black);
+  margin: 0;
+  margin-block-end: 24px;
+}
+.tasa-cambio__descripcion {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--gray);
+  margin: 0;
+  margin-block-end: 48px;
+}
+.tasa-cambio h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--orange);
+  margin: 0;
+  text-align: center;
+  position: relative;
+  left: -50px;
+  margin-block-end: 12px;
+  /* right: 50px; */
+}
+
+section.tasa-cambio {
+  background: var(--off-white);
+}
+
+.tasa-cambio__monedas {
+  list-style: none;
+  padding: 0;
+  /* border-radius: 8px; */
+  /* overflow: hidden; */
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  margin-block-end: 64px;
+}
+.tasa-cambio__monedas::before,
+.tasa-cambio__monedas::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  /* background: aqua; */
+  background-image: url(./img/Vector2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  top: calc(50% - 12px);
+}
+.tasa-cambio__monedas::before {
+  transform: rotate(180deg);
+  left: -38px;
+}
+.tasa-cambio__monedas::after {
+  right: -38px;
+}
+.tasa-cambio__monedas li {
+  display: flex;
+}
+.tasa-cambio__monedas li span {
+  font-family: var(--font);
+  color: #b5b0ac;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  display: block;
+  width: 40%;
+  background: var(--just-white);
+  border: 1px solid var(--off-white);
+  padding: 10px 12px;
+}
+.tasa-cambio__monedas li:first-child {
+  /* border: 1px solid red; */
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.tasa-cambio__monedas li:last-child {
+  /* border: 1px solid green; */
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+/* ============================================ */
+.services {
+  background-color: var(--warm-black);
+  padding-block-start: 4rem;
+  padding-block-end: 30px;
+}
+.services-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 26px;
+  text-align: center;
+  color: var(--just-white);
+  margin: 0;
+}
+.services-description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-gray);
+  margin-block: 24px;
+  text-align: center;
+}
+.card {
+  background: #282623;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  padding: 1rem 20px 22px 1rem;
+  margin-block: 8px 16px;
+}
+.card h3 {
+  margin-block: 11px 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--just-white);
+}
+.card p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-gray);
+}
+.bitcoinbaby-img {
+  width: 100%;
+  height: 387px;
+  object-fit: cover;
+  object-position: center;
+}
