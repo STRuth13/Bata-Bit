@@ -167,7 +167,7 @@ section.tasa-cambio {
   width: 200px;
   margin: 0 auto;
   position: relative;
-  margin-block-end: 64px;
+  padding-block-end: 64px;
 }
 .tasa-cambio__monedas::before,
 .tasa-cambio__monedas::after {
@@ -259,9 +259,217 @@ section.tasa-cambio {
   line-height: 18px;
   color: var(--text-gray);
 }
+.container-img {
+  margin: 0;
+  height: 387px;
+}
 .bitcoinbaby-img {
   width: 100%;
-  height: 387px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+  margin: 0;
+}
+/* =============Planes======================= */
+.plan {
+  background-color: var(--off-white);
+  padding: 64px 0;
+  margin: 0;
+}
+.plan-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--warm-black);
+}
+.plan-description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--gray);
+  margin-top: 24px;
+}
+.container-plan {
+  overflow-x: auto;
+  height: 347px;
+  display: grid;
+  padding: 0 10px;
+  grid-template-columns: repeat(3, 1fr) 10px;
+  align-items: center;
+}
+.container-plan::-webkit-scrollbar {
+  height: 8px;
+}
+.container-plan::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.container-plan::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+.container-plan::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.container-plan::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+.container-plan::-webkit-scrollbar-track:hover,
+.container-plan::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+.plan-card {
+  padding: 24px 16px;
+  min-width: 190px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 8px;
+  background-color: var(--just-white);
+  margin-inline-end: 8px;
+  position: relative;
+}
+.plan-card:last-child {
+  margin-inline-end: 0;
+}
+.plan-alert {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: var(--just-white);
+  padding: 8px;
+  position: absolute;
+  background-color: var(--bitcoin-orange);
+  border-radius: 8px;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.plan-card__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+.plan-price {
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 63px;
+  letter-spacing: -0.08em;
+  position: relative;
+}
+.plan-price::before {
+  content: "$";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+  left: -8px;
+  top: 10px;
+}
+.plan-offert {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--gray);
+}
+.btn-plan {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--warm-black);
+  border: 2px solid #f7931a;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: var(--off-white);
+  display: flex;
+  align-items: center;
+  padding: 5px 16px;
+  margin: 0 auto;
+}
+.btn-plan i {
+  display: inherit;
+  margin-left: 5px;
+}
+.footer {
+  background-color: var(--bitcoin-orange);
+  padding: 40px 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.links {
+  padding: 0;
+}
+.link-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--just-white);
+  list-style: none;
+  margin-block-end: 8px;
+}
+.link-item:last-child {
+  margin-block-end: 0;
+}
+.container-logo {
+  justify-self: end;
+  text-align: right;
+}
+.right {
+  margin: 0;
+  font-weight: 500;
+  font-size: 8px;
+  /* line-height: 18px; */
+  font-family: var(--font);
+  color: var(--soft-orange);
+}
+.seccion-preguntas {
+  background-color: var(--off-white);
+  padding-bottom: 64px;
+}
+.seccion-preguntas__titulo {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--warm-black);
+  text-align: center;
+  margin-bottom: 32px;
+}
+.acordion {
+  display: grid;
+  grid-template-columns: auto 50px;
+  column-gap: 21px;
+}
+.acordion i {
+  
+  background-image: url(./img/Vector.svg); 
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+}
+.acordion p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--warm-black);
+  padding: 12px 0;
+}
+.acordion .answer-question {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+  padding: 15px 0;
+}
+.seccion-preguntas p {
+  margin: 0;
 }
